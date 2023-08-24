@@ -1,1 +1,8 @@
-# piparte-projeto
+# Piparte
+
+## Tarefas 
+[] Header
+[] Apresentação
+[] Projeto
+[] Orçamento
+[] Configuração
