@@ -233,10 +233,10 @@ html {
   margin-bottom: 16px 0;
 }
 
-.cards section.card.contact {
+.cards section.card.instructor {
   box-shadow: 20px 20px 50px -30px #fff;
 }
-.cards section.card.shop {
+.cards section.card.instructor {
   box-shadow: 20px 20px 50px -30px #fff;
 }
 .cards section.card.about {
