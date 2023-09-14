@@ -4,27 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/styles/styles.css">
+
     <title>Piparte - Seu site sobre Pipas</title>
 </head>
 <body>
 
-    <header>
-      <nav>
-        <a class="logo" href="/">Piparte</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+  <header>
+    <nav class="nav-bar">
+        <div class="logo">
+            <h1>Piparte</h1>
         </div>
-        <ul class="nav-list">
-          <li><a href="#oquee">O que é?</a></li>
-          <li><a href="#instrutor">Instrutor</a></li>
-          <li><a href="#">Como soltar?</a></li>
-          <li><a href="#">História</a></li>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="#oquee" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#instrutor" class="nav-link">Instrutores</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"> Sobre</a></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <button><a href="#">Seja um instrutor</a></button>
+        </div>
+
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="src\assets\img\menu_white_36dp.svg" alt=""></button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
         </ul>
-      </nav>
-    </header>
+
+        <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+        </div>
+    </div>
+</header>
+
 
     <section class="home" id="oquee">
       <div class="home-text">
@@ -34,7 +54,7 @@
           <a href="#" class="home-btn">Saiba mais!</a>
       </div>
       <div class="home-img">
-          <img src="./src/assets/img/home.png" alt="logo do pipa">
+          <img src="./src/assets/img/home.png" alt="logo do pipa" width="100%" height="100%">
       </div>
   </section>
 
@@ -58,6 +78,118 @@
         <img src="./src/assets/img/instrutor02.png" alt="Instrutor 02">
     </section>
   </div>
+
+  <section id="event-subscription">
+    <div id="disclaimer">
+      <h2>Piparte</h2>
+      <p class="about-event">
+        Um evento para revolucionar a sua criatividade com Pipas
+      </p>
+      <p>Data do evento:</p>
+      <p class="event-date">Domingo, 30 de Setembro, a partir das 14h</p>
+    </div>
+    <div id="subscription-form">
+      <p>Preencha o formulário para receber os detalhes sobre Pipas</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" placeholder="Digite seu nome" />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" placeholder="Digite seu melhor e-mail" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefone</label>
+          <input type="text" placeholder="Número de Whatsapp" />
+        </div>
+        <div class="form-group">
+          <label for="interest">Principal interesse</label>
+          <select name="interest">
+            <option value="" disabled selected>Selecione</option>
+            <option value="apartment">Linhas</option>
+            <option value="house">Pipas</option>
+            <option value="garden">Carretilhas</option>
+            <option value="other">Outros</option>
+          </select>
+        </div>
+        <input type="submit" class="btn" value="Quero me inscrever" />
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div id="footer_content">
+        <div id="footer_contacts">
+            <h1>Piparte</h1>
+            <p>Uma brincadeira leve e fácil!</p>
+
+            <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <ul class="footer-list">
+            <li>
+                <h3>Para diversão</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Cursos</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Nossas aventuras</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Músicas</a>
+            </li>
+        </ul>
+
+        <ul class="footer-list">
+            <li>
+                <h3>Produtos</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Linhas</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Pipas</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Carretilhas</a>
+            </li>
+        </ul>
+
+        <div id="footer_subscribe">
+            <h3>Inscreva-se</h3>
+
+            <p>
+                Insira seu e-mail para receber novidades sobre Pipas
+            </p>
+
+            <div id="input_group">
+                <input type="email" id="email">
+                <button>
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer_copyright">
+        &#169
+        2023, Todos os direitos reservados
+    </div>
+</footer>
 
   <script src="./src/js/mobile-navbar.js"></script>
   </body>
