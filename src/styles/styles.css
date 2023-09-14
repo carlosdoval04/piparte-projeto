@@ -453,7 +453,8 @@ footer {
 #input_group {
   display: flex;
   align-items: center;
-  background-color: var(--color-neutral-0);
+  color: #fff;
+  background-color: #3982AB;
   border-radius: 4px;
 }
 
