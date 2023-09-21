@@ -81,42 +81,48 @@
 
   <section id="event-subscription">
     <div id="disclaimer">
-      <h2>Piparte</h2>
-      <p class="about-event">
-        Um evento para revolucionar a sua criatividade com Pipas
-      </p>
-      <p>Data do evento:</p>
-      <p class="event-date">Domingo, 30 de Setembro, a partir das 14h</p>
-    </div>
-    <div id="subscription-form">
-      <p>Preencha o formulário para receber os detalhes sobre Pipas</p>
-      <form>
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" placeholder="Digite seu nome" />
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" placeholder="Digite seu melhor e-mail" />
-        </div>
-        <div class="form-group">
-          <label for="phone">Telefone</label>
-          <input type="text" placeholder="Número de Whatsapp" />
-        </div>
-        <div class="form-group">
-          <label for="interest">Principal interesse</label>
-          <select name="interest">
-            <option value="" disabled selected>Selecione</option>
-            <option value="apartment">Linhas</option>
-            <option value="house">Pipas</option>
-            <option value="garden">Carretilhas</option>
-            <option value="other">Outros</option>
-          </select>
-        </div>
-        <input type="submit" class="btn" value="Quero me inscrever" />
-      </form>
-    </div>
+        <h2>Piparte</h2>
+        <p class="about-event">
+          Um evento para revolucionar a sua criatividade com Pipas
+        </p>
+        <p>Data do evento:</p>
+        <p class="event-date">Domingo, 30 de Setembro, a partir das 14h</p>
+      </div>
+      <div id="subscription-form">
+        <p>Preencha o formulário para receber os detalhes sobre Pipas</p>
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Digite seu nome" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu melhor e-mail" required/>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="text" id="phone" placeholder="Número de Whatsapp" required/>
+          </div>
+          <div class="form-group">
+            <label for="interest">Principal interesse</label>
+            <select name="interest" id="interest">
+              <option value="" disabled selected>Selecione</option>
+              <option value="1">Linhas</option>
+              <option value="2">Pipas</option>
+              <option value="3">Carretilhas</option>
+              <option value="4">Outros</option>
+            </select>
+          </div>
+          <input type="submit" class="btn" value="Quero me inscrever" />
+        </form>
+      </div>
   </section>
+
+  <div class="card" id="registration-details">
+    <div class="calc-result">
+      <p class="text-registration">Faça seu orçamento do nosso evento</p>
+    </div>
+  </div>
 
   <footer>
     <div id="footer_content">
@@ -191,6 +197,6 @@
     </div>
 </footer>
 
-  <script src="./src/js/mobile-navbar.js"></script>
+  <script src="./src/js/script.js"></script>
   </body>
 </html>
