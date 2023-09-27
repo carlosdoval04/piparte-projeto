@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault(); // Evita o envio padrão do formulário
 
     const nome = document.getElementById("name").value;
+    const sobrenome = document.getElementById("surname").value;
     const email = document.getElementById("email").value;
     const telefone = document.getElementById("phone").value;
     const interesse = document.getElementById("interest").value;
 
     // Verifique se todos os campos obrigatórios foram preenchidos
-    if (!nome || !email || !telefone || !interesse) {
+    if (!nome || !sobrenome || !email || !telefone || !interesse) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
@@ -30,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
     let valorReais;
 
     switch (interesse) {
-      case "1":
+      case "Pipas":
         valorReais = 100; // Pipa
         break;
-      case "2":
+      case "Carretilhas":
         valorReais = 200; // Carretilha
         break;
-      case "3":
+      case "Outros":
         valorReais = 50; // Outros
         break;
       // Adicione casos para outros interesses, se necessário
@@ -44,12 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
         valorReais = 0; // Valor padrão se a opção não for selecionada
     }
 
-    const resultado = `Prazer, ${nome}. 
+    const resultado = `Prazer, ${nome} ${sobrenome}. 
                         Te enviaremos novidades por esse e-mail: ${email}, 
-                        Caso ocorra algum imprevisto entraremos em contato pelo telefone cadastrado: ${telefone}, 
+                        Caso ocorra algum imprevisto, entraremos em contato pelo telefone cadastrado: ${telefone}, 
                         Ficamos muito felizes com seu interesse em: ${interesse}, 
                         Sua participação ficou: R$ ${valorReais.toFixed(2)}`;
-    
+
     // Exibe o elemento registration-details
     registrationDetails.style.display = "block";
     // Define o conteúdo do elemento registration-details
